@@ -271,7 +271,11 @@ function resetGame(){
             if (choicesContainer.style.display==="flex"){
                 playAgainBtn.style.display = "none"
             }
-            rulesBtn.style.marginTop = "150px"
+            if (screenSize.matches){
+                rulesBtn.style.marginTop = "250px"
+            } else {
+                rulesBtn.style.marginTop = "150px"
+            }
             
 }
 
