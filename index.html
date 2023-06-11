@@ -100,13 +100,19 @@ let playerScore = document.getElementById("player-score")
 const btns = document.querySelectorAll('.background-img')
 let playerChoice = ""
 let computerChoice = generateComputerChoice()
-let playerScorePoint = 0
+let fromLocalStorage = (localStorage.getItem("Score")) 
+ 
+if (localStorage.getItem("Score")){
+    fromLocalStorage = JSON.parse(localStorage.getItem("Score")) 
+} else{
+    fromLocalStorage = JSON.parse("0")
+}
+let playerScorePoint = fromLocalStorage
 
-let fromLocalStorage = JSON.parse(localStorage.getItem("Score")) 
 playerScore.textContent =  fromLocalStorage 
+
 const playAgainBtn = document.getElementById("play-again-btn")
 const playAgain = document.getElementById("play-again")
-playerScorePoint = fromLocalStorage
 
 function updateScoreBoard(){
     if(result==="WIN"){
