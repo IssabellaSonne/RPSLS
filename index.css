@@ -1,0 +1,414 @@
+html{
+    background-image: radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%);
+    background-size: 100%;
+}
+  
+  body {
+    margin: 0;
+    padding-top: 1.175em;
+    background: radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%);
+    font-family: 'Barlow Semi Condensed';
+    user-select: none;
+    padding-bottom: 100px;
+    background-size: 100%;
+  }
+  
+  
+  .container{
+      width: 80%;
+      margin: auto;
+  
+  }
+  
+  
+  
+  header {
+      padding: 0.75em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 2px solid hsl(217, 16%, 45%);
+      border-radius: 8px;
+      background-image: radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%);;
+  }
+  
+  .score-display{
+      background: linear-gradient(0deg, #F3F3F3 0%, #FFFFFF 100%);
+      box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+      border-radius: 4px;
+      width: 80px;
+      height: 72px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      
+  }
+  
+  .logo{
+      width: 59px;
+      height: 58px;
+  }
+  
+  .score-display p{
+      color: #2A45C2;
+      font-size: 0.625rem;
+      margin-bottom: 0;
+      font-weight: 600;
+      
+  }
+  
+  .score-display h1{
+      color: #565468;
+      font-size: 2.5rem;
+      margin: 0;
+  }
+  
+  .game{
+      margin-top: 5.3em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;  
+  }
+  
+  .game button{
+      width: 96px;
+      height: 97px;    
+      border-radius: 50%;
+  }
+  .background-img{
+      background-repeat: no-repeat; 
+      background-position: center;
+      background-size: 50%; 
+  }
+  
+  #rock{
+      border: 15px solid #DB2E4D;
+      background-image: url(images/icon-rock.svg); 
+      box-shadow: 0px 5px 1px 0px #9D1634, 0px 5px 1px #BABFD4 inset; 
+      background-repeat: no-repeat; 
+      background-position: center;
+      background-size: 50%; 
+      width: 130px;
+      height:  133px;
+      border-radius: 50%;
+  }
+  #scissors{
+      border: 15px solid #EB9F0E;
+      background-image: url(images/icon-scissors.svg);
+      box-shadow: 0px 5px 1px 0px #C76C1B, 0px 5px 1px #BABFD4 inset;
+      background-repeat: no-repeat; 
+      background-position: center;
+      background-size: 50%; 
+      width: 130px;
+      height:  133px;
+      border-radius: 50%;
+  }
+  
+  #spock{
+      border: 15px solid #3FB7CD;
+      background-image: url(images/icon-spock.svg);
+      box-shadow: 0px 5px 1px 0px #2D8DAB, 0px 5px 1px #BABFD4 inset;
+      background-repeat: no-repeat; 
+      background-position: center;
+      background-size: 50%; 
+      width: 130px;
+      height:  133px;
+      border-radius: 50%;
+      
+  }
+  
+  #paper{
+      border: 15px solid #4664F4;
+      background-image: url(images/icon-paper.svg);
+      box-shadow: 0px 5px 1px 0px #2A45C2, 0px 5px 1px #BABFD4 inset;
+      background-repeat: no-repeat; 
+      background-position: center;
+      background-size: 50%; 
+      width: 130px;
+      height:  133px;
+      border-radius: 50%;
+  }
+  
+  #lizard{
+      border: 15px solid #834EE3;
+      background-image: url(images/icon-lizard.svg);
+      box-shadow: 0px 5px 1px 0px #5F37A8, 0px 5px 1px #BABFD4 inset; 
+      background-repeat: no-repeat; 
+      background-position: center;
+      background-size: 50%;  
+      width: 130px;
+      height:  133px;
+      border-radius: 50%;
+  }
+  
+  #space button{
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      margin-left: 1.25em;
+      margin-top: 1.375em;
+      background: hsl(237, 49%, 15%);
+      border: none;
+  }
+  
+
+  
+  #text{
+      font-family: 'Barlow Semi Condensed';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 0.9375rem;
+      line-height: 32px;
+      color: white;
+      text-align: center;
+  }
+  
+  #display-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+  }
+  
+  .rock-btn{
+      border: 10px solid #DB2E4D;
+      background-image: url(images/icon-rock.svg); 
+      box-shadow: 0px 5px 1px 0px #9D1634, 0px 5px 1px #BABFD4 inset;
+      grid-column: 2/2;
+      grid-row: 1/1;
+      position: absolute;
+      top: 150px;
+      margin-left: 9.375em;
+  }
+  .scissors-btn{
+      border: 10px solid #EB9F0E;
+      background-image: url(images/icon-scissors.svg);
+      box-shadow: 0px 5px 1px 0px #C76C1B, 0px 5px 1px #BABFD4 inset;
+      position: absolute;
+      top: -30px;
+  }
+  
+  .spock-btn{
+      border: 10px solid #3FB7CD;
+      background-image: url(images/icon-spock.svg);
+      box-shadow: 0px 5px 1px 0px #2D8DAB, 0px 5px 1px #BABFD4 inset;
+      position: absolute;
+      top: 30px;
+      margin-left: -14.375em;
+  }
+  
+  .paper-btn{
+      border: 10px solid #4664F4;
+      background-image: url(images/icon-paper.svg);
+      box-shadow: 0px 5px 1px 0px #2A45C2, 0px 5px 1px #BABFD4 inset;
+      position: absolute;
+      top: 30px;
+      margin-left: 14.375em;
+  }
+  
+  .lizard-btn{
+      border: 10px solid #834EE3;
+      background-image: url(images/icon-lizard.svg);
+      box-shadow: 0px 5px 1px 0px #5F37A8, 0px 5px 1px #BABFD4 inset;
+      position: absolute;
+      top: 150px;
+      margin-left: -9.375em;
+  }
+  #play-again{
+      display: none;
+      background: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      margin: 3.875em auto 2em auto;
+  }
+  
+  h2{
+      color: white;
+      font-size: 3.5rem;
+      margin-bottom: 0.175em;
+      
+  }
+
+  #play-again button{
+      display: none;
+      width: 220px;
+      height: 48px;
+      font-size: 1rem;
+      font-family: inherit;
+      border-radius: 8px;
+      color: #3B4262;
+      background: linear-gradient(#F3F3F3, #FFFFFF)
+  }
+  
+  
+  
+  .rules-btn{
+      padding: 10px 30px;
+      border: 1px solid #FFFFFF;
+      border-radius: 8px;
+      background-image: radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%);;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      display: block;
+      margin: 126px auto 56px auto;
+      font-family: inherit;
+  }
+  
+  
+  
+  .rules-display{
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 137px;
+  }
+  .rules-display h1{
+      color: #3B4262;
+      font-family: inherit;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: -41px
+  }
+  
+  .pentagon{
+      width: 215.89px;
+      height: 205.32px;
+  }
+  
+  
+  
+  @media (min-width: 1024px) {
+    /* Styles for desktop */
+    
+    .logo{
+        width: 108.84px;
+        height: 108.08px;
+    }
+    
+    .score-display{
+        width: 150px;
+        height: 114px;
+        line-height: 1;
+    }
+    
+    .score-display h1{
+      font-size: 64px;
+    }
+    
+    .score-display p{
+      font-size: 16px;
+      
+    }
+    
+    .pentagon{
+      width: 328.11px;
+      height: 312.06px;
+    }
+    
+    .game button{
+      width: 145px;
+      height: 148px;
+      border-width: 18px;
+    }
+    
+    .rock-btn{
+        top: 250px;
+        margin-left: 200px;
+        cursor: pointer;
+    }
+    
+    .lizard-btn{
+        top: 250px;
+        margin-left: -200px;
+        cursor: pointer;
+    }
+    
+    .spock-btn{
+        top: 50px;
+        margin-left: -350px;
+        cursor: pointer;
+    }
+    
+    .paper-btn{
+        top: 50px;
+        margin-left: 350px;
+        cursor: pointer;
+    }
+    
+    .scissors-btn{
+        top: -60px;
+        cursor: pointer;
+    }
+    
+    .rules-btn{
+        margin-right: 0;
+        cursor: pointer;
+    }
+    
+    .rules-display{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        gap: 0;
+        background: white;
+        width: 400px;
+        height: 461px;
+        display: none;
+        grid-template: 1fr 400px / 1fr 1fr 1fr;
+        border-radius: 8px;
+    }
+    
+    .rules-display h1{
+        align-self: flex-start;
+        grid-row: 1/2;
+        grid-column: 1/2;
+        margin: 32px 0 0 32px;
+    }
+    
+    #close-btn {
+        align-self: flex-start;
+        grid-row: 1/2;
+        grid-column: 3/4;
+        margin-top: 38px;
+        margin-left: -23px;
+    }
+    
+    .rules-diagram{
+        width: 336px;
+        height: 330px;
+        grid-row: 2/3;
+        grid-column: 2/3;
+        margin-left: -83px;
+        
+    }
+    
+    #display-container button{
+        width: 292.61px;
+        height: 300px;
+        border-width: 36px;
+        margin-top: 63px  
+    }
+    
+    #display-container{
+        gap: 71px;
+    }
+    
+    #display-container p{
+        font-size: 24px;
+        
+    }
+    
+    
+  }
+  
+  
+  
+  
