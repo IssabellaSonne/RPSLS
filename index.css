@@ -20,7 +20,11 @@ html{
   
   }
   
-  
+  .shadow{
+      box-shadow: 0px 0px 0px 16px #f1f1f1;
+      border: 16px solid #f9f9f9;
+      background: wheat;
+  }
   
   header {
       padding: 0.75em;
@@ -154,7 +158,7 @@ html{
   
 
   
-  #text{
+  .text{
       font-family: 'Barlow Semi Condensed';
       font-style: normal;
       font-weight: 700;
@@ -164,11 +168,15 @@ html{
       text-align: center;
   }
   
+ 
+  
+  
   #display-container{
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 50px;
+      padding-top: 99px;
   }
   
   .rock-btn{
@@ -223,7 +231,7 @@ html{
       align-items: center;
       justify-content: center;
       border: none;
-      margin: 2.1875em auto 2em auto;
+      margin: 3.875em auto 2em auto;
   }
   
   h2{
@@ -280,7 +288,24 @@ html{
       height: 205.32px;
   }
   
+  .shadow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 253px;
+    border-radius: 50%; 
+    box-shadow: inset 0px 0 0 32px rgba(255, 255, 255, 0.05), 0 0 0 32px rgba(255, 255, 255, 0.01);;
+    border: 32px solid rgba(255, 255, 255, 0.03);
+    box-sizing: border-box;
+    background: none;
+  }
   
+
+
+
+  
+
   
   @media (min-width: 1024px) {
     /* Styles for desktop */
@@ -288,6 +313,10 @@ html{
     .logo{
         width: 108.84px;
         height: 108.08px;
+    }
+    
+    .choices-container{
+        margin-top: 6em;
     }
     
     .score-display{
@@ -404,6 +433,14 @@ html{
     #display-container p{
         font-size: 24px;
         
+    }
+    
+    .shadow{
+        width: 542.61px;
+        height: 550px;
+        box-shadow: inset 0px 0 0 70px rgba(255, 255, 255, 0.05), 0 0 0 70px rgba(255, 255, 255, 0.01);
+        border: 70px solid rgba(255, 255, 255, 0.03);
+        box-sizing: border-box;
     }
     
     

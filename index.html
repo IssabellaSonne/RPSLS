@@ -19,15 +19,14 @@
   </head>
 
   <body id="body">
-      <main id="main">
-        <header class="container">
+    <main id="main">
+        <header class="container" id="header">
             <img class="logo" src="images/logo-bonus.svg" alt="Rock,Paper,Scissors,Lizard,Spock">
             <div class="score-display">
                 <p>SCORE</p>
                 <h1 id="player-score">0</h1>
             </div>
         </header>
-        <div class="choices-container game" id="btn-display"></div>
         <div class="game choices-container" id="choices-container">
             <img src="images/bg-pentagon.svg" class="pentagon">
             <button class="scissors-btn background-img" id="scissors-btn" value="scissors"></button>
@@ -41,7 +40,7 @@
             <h2 id="win-or-lose"></h2>
             <button id="play-again-btn">Play Again</button>
         </div>
-        <div> 
+        <div > 
             <button class="rules-btn" id="rules-btn">RULES</button>
         </div>
       </main>
@@ -59,25 +58,25 @@
       <script>
 
         const rulesBtn = document.getElementById("rules-btn")
-        const htmlBody = document.getElementById("body");
-        const mainEl = document.getElementById("main")
-        const html = document.getElementById("html");
-        const rulesDisplay = document.getElementById('rules-display')
-        const initialBackground = html.style.background;
-        const screenSize = window.matchMedia("(min-width: 1024px)")
+const htmlBody = document.getElementById("body");
+const mainEl = document.getElementById("main")
+const html = document.getElementById("html");
+const rulesDisplay = document.getElementById('rules-display')
+const initialBackground = html.style.background;
+const screenSize = window.matchMedia("(min-width: 1024px)")
 
 
 
-    // to get rules buttton to display rules for screen sizes
-        rulesBtn.addEventListener("click", function(){
-            if (screenSize.matches) { // If media query matches
-                rulesDisplay.style.display = "grid"
-            } else{
-                htmlBody.style.background = "none";
-                mainEl.style.display = "none"
-                html.style.background = "none"
-                rulesDisplay.style.display = "flex"
-            } 
+// to get rules buttton to display rules for screen sizes
+    rulesBtn.addEventListener("click", function(){
+        if (screenSize.matches) { // If media query matches
+            rulesDisplay.style.display = "grid"
+        } else{
+            htmlBody.style.background = "none";
+            mainEl.style.display = "none"
+            html.style.background = "none"
+            rulesDisplay.style.display = "flex"
+        } 
     
             const closeBtn = document.getElementById('close-btn');
             closeBtn.addEventListener("click", function(){
@@ -86,214 +85,315 @@
             rulesDisplay.style.display = "none"
     
        
-        })
-
     })
 
+})
 
 
 
 
-    const choicesArr = ["rock", "paper", "scissors", "spock", "lizard"]
-    let choicesContainer = document.getElementById("choices-container")
-    let playerScore = document.getElementById("player-score")
-    const btns = document.querySelectorAll('.background-img')
-    let playerChoice = ""
-    let computerChoice = generateComputerChoice()
-    let fromLocalStorage = (localStorage.getItem("Score")) 
-    
-    if (localStorage.getItem("Score")){
-        fromLocalStorage = JSON.parse(localStorage.getItem("Score")) 
-    } else{
-        fromLocalStorage = JSON.parse("0")
-    }
-    let playerScorePoint = fromLocalStorage
 
-    playerScore.textContent =  fromLocalStorage 
+const choicesArr = ["rock", "paper", "scissors", "spock", "lizard"]
+let choicesContainer = document.getElementById("choices-container")
+let playerScore = document.getElementById("player-score")
+const btns = document.querySelectorAll('.background-img')
+let playerChoice = ""
+let computerChoice = generateComputerChoice()
+let fromLocalStorage = (localStorage.getItem("Score")) 
+ 
+if (localStorage.getItem("Score")){
+    fromLocalStorage = JSON.parse(localStorage.getItem("Score")) 
+} else{
+    fromLocalStorage = JSON.parse("0")
+}
+let playerScorePoint = fromLocalStorage
 
-    const playAgainBtn = document.getElementById("play-again-btn")
-    const playAgain = document.getElementById("play-again")
+playerScore.textContent =  fromLocalStorage 
+
+const playAgainBtn = document.getElementById("play-again-btn")
+const playAgain = document.getElementById("play-again")
 
 
 
-    function updateScoreBoard(){
-        if(result==="WIN"){
-            playerScorePoint ++
+function updateScoreBoard(){
+    if(result==="WIN"){
+        playerScorePoint ++
+        playerScore.textContent = playerScorePoint
+        document.getElementById("win-or-lose").textContent = "YOU WIN" 
+    } else if(result==="LOSE") {
+        if(playerScorePoint > 0){
+            playerScorePoint --
             playerScore.textContent = playerScorePoint
-            document.getElementById("win-or-lose").textContent = "YOU WIN" 
-        } else if(result==="LOSE") {
-            if(playerScorePoint > 0){
-                playerScorePoint --
-                playerScore.textContent = playerScorePoint
-                document.getElementById("win-or-lose").textContent = "YOU LOSE"
-            } else{
-                document.getElementById("win-or-lose").textContent = "YOU LOSE"
-            }
+            document.getElementById("win-or-lose").textContent = "YOU LOSE"
+        } else{
+            document.getElementById("win-or-lose").textContent = "YOU LOSE"
+        }
+   
+    } else {
+        playerScorePoint === playerScorePoint
+           playerScore.textContent = playerScorePoint
+           document.getElementById("win-or-lose").textContent = "TIE"
+           } 
+    playAgainBtn.style.display = "block"
+    rulesBtn.style.marginTop = "56px"
+    localStorage.setItem("Score", JSON.stringify(playerScorePoint))
     
-        } else {
-            playerScorePoint === playerScorePoint
-            playerScore.textContent = playerScorePoint
-            document.getElementById("win-or-lose").textContent = "TIE"
-            } 
-        playAgainBtn.style.display = "block"
-        rulesBtn.style.marginTop = "56px"
-        localStorage.setItem("Score", JSON.stringify(playerScorePoint))
-        
-    }
+    
+
+}
 
 
 
-    // setting game rules to determine winner
-    function generateComputerChoice(){
-        const randomIndex = Math.floor(Math.random() * choicesArr.length);
-        return choicesArr[randomIndex];
-    }
+// setting game rules to determine winner
+function generateComputerChoice(){
+     const randomIndex = Math.floor(Math.random() * choicesArr.length);
+     return choicesArr[randomIndex];
+}
 
-    // To determine winner
+// To determine winner
     let result = ""
 
-    function determineWinnner(playerChoice, computerChoice){
+function determineWinnner(playerChoice, computerChoice){
 
-        if (playerChoice === computerChoice){
-            result = "TIE"
-        } else if((playerChoice=== "rock" && (computerChoice===  "scissors" || computerChoice === "lizard"))||
-        (playerChoice=== "paper" && (computerChoice=== "rock" || computerChoice === "spock")) ||
-        (playerChoice=== "scissors" && (computerChoice=== "paper" || computerChoice === "lizard")) ||
-        (playerChoice=== "lizard" && (computerChoice=== "spock" || computerChoice === "paper")) ||
-        (playerChoice=== "spock" && (computerChoice=== "rock" || computerChoice === "scissors"))){
-            result = "WIN"
-        }   else {
-            result = "LOSE"
-        } 
-        return result
+    if (playerChoice === computerChoice){
+        result = "TIE"
+    } else if((playerChoice=== "rock" && (computerChoice===  "scissors" || computerChoice === "lizard"))||
+      (playerChoice=== "paper" && (computerChoice=== "rock" || computerChoice === "spock")) ||
+      (playerChoice=== "scissors" && (computerChoice=== "paper" || computerChoice === "lizard")) ||
+      (playerChoice=== "lizard" && (computerChoice=== "spock" || computerChoice === "paper")) ||
+      (playerChoice=== "spock" && (computerChoice=== "rock" || computerChoice === "scissors"))){
+          result = "WIN"
+      }   else {
+        result = "LOSE"
+      } 
+      return result
     }
 
 
-    // updating score
+// updating score
+
+
 
     // To show the results when player selects a button
-    const displayContainer = document.getElementById("display-container")
+const displayContainer = document.getElementById("display-container")
 
-    if (screenSize.matches) { // If media query matches
+if (screenSize.matches) { // If media query matches
+    function display(){
+    determineWinnner(playerChoice, computerChoice)
+    choicesContainer.style.display = "none"
+    
+    displayContainer.innerHTML = `
+        <div id="players-div"> 
+          <p class="text" id="text-one">YOU PICKED</p>
+          <div id="my-div"> 
+             <button id="${playerChoice}"></button>
+          </div>
+        </div>
+        <div id="space">
+            <p class="text">THE HOUSE PICKED</p>
+            <button></button>
+        </div>
+    `
+    const myDiv = document.getElementById("my-div")
+    const one = document.getElementById("text-one")
+    setTimeout(function(){
+        determineWinnner(playerChoice, computerChoice)
+        if(result==="WIN"){
+            myDiv.classList.add("shadow")
+            document.getElementById(`${playerChoice}`).style.marginTop = "-8px"
+            document.getElementById("space").style.display = "none"
+            displayContainer.innerHTML += `
+            <div id="com-div">
+                <p class="text" id="text-two">THE HOUSE PICKED</p>
+                <div id="your-div">
+                    <button id="${computerChoice}"></button>
+                </div>
+            </div>
+            `
+            document.getElementById(`${computerChoice}`).style.marginTop = "-8px"
+            document.getElementById("text-one").style.marginBottom = "-50px" 
+            document.getElementById("text-two").style.paddingBottom = "50px" 
+            document.getElementById("com-div").style.marginTop = "-134px"
+            displayContainer.marginLeft = "-50px"          
+        } else if(result==="LOSE"){
+            document.getElementById(`${playerChoice}`).style.marginTop = "-8px"
+            document.getElementById("space").style.display = "none"
+            displayContainer.innerHTML += `
+            <div id="com-div">
+                <p class="text" id="text-three">THE HOUSE PICKED</p>
+                <div id="your-div">
+                    <button id="${computerChoice}"></button>
+                </div>
+            </div>
+            `
+            document.getElementById("your-div").classList.add("shadow")
+            document.getElementById(`${computerChoice}`).style.marginTop = "-8px"
+            document.getElementById("text-three").style.marginBottom = "-50px" 
+            document.getElementById("text-one").style.paddingBottom = "50px" 
+            document.getElementById("players-div").style.marginTop = "-134px"
+            displayContainer.marginRight= "-50px" 
+            
+        }else{
+            document.getElementById("space").style.display = "none"
+            displayContainer.innerHTML += `
+            <div id="com-div">
+                <p class="text">THE HOUSE PICKED</p>
+                <div id="your-div">
+                    <button id="${computerChoice}"></button>
+                </div>
+            </div>
+            `
+        }
+        
+        
+        setTimeout(function(){
+            updateScoreBoard()
+             determineWinnner(playerChoice, computerChoice)
+            if (result==="WIN"){
+                // playAgain.style.marginLeft = "150px"
+                playAgain.style.marginTop = "-400px"
+                document.getElementById("players-div").style.marginLeft = "-120px"
+            } else if(result==="LOSE"){
+                document.getElementById("com-div").style.marginRight = "-120px"
+                playAgain.style.marginTop = "-400px"
+            }else{
+                playAgain.style.marginTop = "-300px"
+            }
+            rulesBtn.style.marginTop = "8.5em"
+            displayContainer.style.gap = "352px"
+            rulesBtn.style.marginRight = "2em"
+            
+        }, 2500)
+            
+
+    },3000)
+    }
+        } else{   //phone layout
         function display(){
         determineWinnner(playerChoice, computerChoice)
         choicesContainer.style.display = "none"
         displayContainer.innerHTML = `
-            
-            <div id="my-div">
-                <p id="text">YOU PICKED</p> 
+        <div id="players-div">
+            <div id= "my-div">
                 <button id="${playerChoice}"></button>
             </div>
-            <div id="space">
-                <p id="text">THE HOUSE PICKED</p>
-                <button></button>
-            </div>
-        `
-        // document.getElementById("my-div").classList.add("my-div")
-        const displayDiv = document.getElementById("display-div")
-        setTimeout(function(){
-            document.getElementById("space").style.display = "none"
-            displayContainer.innerHTML += `
-            <div>
-                <p id="text">THE HOUSE PICKED</p>
-                <button id="${computerChoice}"></button>
-            </div>
-            `
-            setTimeout(function(){
-                updateScoreBoard()
-                rulesBtn.style.marginTop = "8.5em"
-                displayContainer.style.gap = "352px"
-                playAgain.style.marginTop = "-200px"
-                rulesBtn.style.marginRight = "2em"
-                
-            }, 2500)
-                
+            <p class="text" id="text-one">YOU PICKED</p>
+        </div> 
 
-        },3000)
+        <div id="space">
+            <button></button>
+            <p class="text">THE HOUSE PICKED</p>
+        </div>
+      
+    `
+    const myDiv = document.getElementById("my-div")
+    const one = document.getElementById("text-one")
+        
+    setTimeout(function(){
+        determineWinnner(playerChoice, computerChoice)
+        if (result==="WIN"){
+         myDiv.classList.add("shadow")
+        one.style.marginTop = "-40px"
+        one.style.marginLeft = "-50px"
+        displayContainer.style.gap = "0"
+        displayContainer.style.paddingTop = "40px"
+        myDiv.style.marginLeft = "-50px" 
+        
+        document.getElementById("space").style.display = "none"
+        displayContainer.innerHTML += `
+        <div id="com-div">
+            <div id="your-div">
+            <button id="${computerChoice}"></button>
+            </div>
+            <p class="text" id="three">THE HOUSE PICKED</p>
+        </div>
+        `
+        document.getElementById("com-div").style.marginTop ="60px"
+  
+        } else if(result==="LOSE"){
+        document.getElementById("space").style.display = "none"
+        displayContainer.innerHTML += `
+        <div id="com-div">
+            <div id="your-div">
+            <button id="${computerChoice}"></button>
+            </div>
+            <p class="text" id="three">THE HOUSE PICKED</p>
+        </div>
+        ` 
+        document.getElementById("your-div").classList.add("shadow")
+        document.getElementById("three").style.marginTop = "-40px"
+        document.getElementById("three").style.marginLeft = "50px"
+        displayContainer.style.gap = "0"
+        displayContainer.style.paddingTop = "40px"
+        document.getElementById("your-div").style.marginRight = "-50px"
+        document.getElementById("players-div").style.marginTop ="60px"
+        } else{
+            document.getElementById("space").style.display = "none"
+        displayContainer.innerHTML += `
+        <div id="com-div">
+            <div id="your-div">
+            <button id="${computerChoice}"></button>
+            </div>
+            <p class="text" id="three">THE HOUSE PICKED</p>
+        </div>
+        ` 
         }
-            } else{   //phone layout
-            function display(){
-            determineWinnner(playerChoice, computerChoice)
-            choicesContainer.style.display = "none"
-            displayContainer.innerHTML = `
-            <div>
-                <button id="${playerChoice}"></button>
-                <p id="text">YOU PICKED</p> 
-            </div>
-            <div id="space">
-                <button></button>
-                <p id="text">THE HOUSE PICKED</p>
-            </div>
         
-        `
-        const displayDiv = document.getElementById("display-div")
+        // document.getElementById(`${playerChoice}`).style
+        
         setTimeout(function(){
-            document.getElementById("space").style.display = "none"
-            displayContainer.innerHTML += `
-            <div>
-                <button id="${computerChoice}"></button>
-                <p id="text">THE HOUSE PICKED</p>
-            </div>
-            `
-            setTimeout(function(){
-                updateScoreBoard()
-        
-            }, 2500)
-                
-
-        },3000)
-        
-        
-            } 
+            updateScoreBoard()
+            if(determineWinnner(playerChoice, computerChoice)&&result==="LOSE"){
+            }
             
-        }
-
-
-
-    btns.forEach(btn => {
-
-    btn.addEventListener('click', event => {
-        //    play()
-        playerChoice = event.target.value 
-        computerChoice = generateComputerChoice()
+        }, 2500)
+    },3000)
+    
+    
+        } 
         
-
-        display()
-        
-    })
-
-    })
-
-    function resetGame(){
-        
-            choicesContainer.style.display = "flex"
-                displayContainer.innerHTML = " "
-                document.getElementById("win-or-lose").innerHTML = " "
-                
-                if (choicesContainer.style.display==="flex"){
-                    playAgainBtn.style.display = "none"
-                    displayContainer.style.gap = "71px"
-                }
-                if (screenSize.matches){
-                    
-                    rulesBtn.style.margin = "16em 2em 2em auto"
-                } else {
-                    rulesBtn.style.marginTop = "126px"
-                }
     }
 
-    playAgainBtn.addEventListener("click", function(){
-        resetGame()
+
+
+btns.forEach(btn => {
+
+   btn.addEventListener('click', event => {
+    //    play()
+       playerChoice = event.target.value 
+       computerChoice = generateComputerChoice()
+       if (display() && reult === "WIN"){
+           document.getElementById(`${playerChoice}`).classList.add("shadow")
+       }
+        
+       
+   })
+
+})
+
+function resetGame(){
+           choicesContainer.style.display = "flex"
+            displayContainer.innerHTML = " "
+            document.getElementById("win-or-lose").innerHTML = " "
+            
+            if (choicesContainer.style.display==="flex"){
+                playAgainBtn.style.display = "none"
+                displayContainer.style.gap = "71px"
+            }
+            if (screenSize.matches){
                 
-    })
+                rulesBtn.style.margin = "16em 2em 2em auto"
+            } else {
+                rulesBtn.style.marginTop = "150px"
+                
+            }
+}
 
+playAgainBtn.addEventListener("click", function(){
+    resetGame()
+               
+})
 
-    function play() {
-            const audio = new Audio("audios/button-124476.mp3")
-            audio.play();
-            
-            
-        }
 
     </script>
    </body>
