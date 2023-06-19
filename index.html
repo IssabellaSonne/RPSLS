@@ -57,7 +57,7 @@
       </div>
       <script>
 
-        const rulesBtn = document.getElementById("rules-btn")
+const rulesBtn = document.getElementById("rules-btn")
 const htmlBody = document.getElementById("body");
 const mainEl = document.getElementById("main")
 const html = document.getElementById("html");
@@ -214,8 +214,8 @@ if (screenSize.matches) { // If media query matches
             document.getElementById("text-one").style.marginBottom = "-50px" 
             document.getElementById("text-two").style.paddingBottom = "50px" 
             document.getElementById("com-div").style.marginTop = "-134px"
-            displayContainer.marginLeft = "-50px"  
-            rulesBtn.style.marginTop = "-8.5em"
+            displayContainer.marginLeft = "-50px"   
+            rulesBtn.style.marginBottom = "-2em"       
         } else if(result==="LOSE"){
             document.getElementById(`${playerChoice}`).style.marginTop = "-8px"
             document.getElementById("space").style.display = "none"
@@ -233,7 +233,7 @@ if (screenSize.matches) { // If media query matches
             document.getElementById("text-one").style.paddingBottom = "50px" 
             document.getElementById("players-div").style.marginTop = "-134px"
             displayContainer.marginRight= "-50px" 
-            rulesBtn.style.marginTop = "-8.5em"
+            rulesBtn.style.marginBottom = "-2em"
         }else{
             document.getElementById("space").style.display = "none"
             displayContainer.innerHTML += `
@@ -244,27 +244,24 @@ if (screenSize.matches) { // If media query matches
                 </div>
             </div>
             `
-            rulesBtn.style.marginTop = "-9.5em"
+            rulesBtn.style.marginBottom = "-4em"
         }
         
         
         setTimeout(function(){
             updateScoreBoard()
-            
+             determineWinnner(playerChoice, computerChoice)
             if (result==="WIN"){
                 // playAgain.style.marginLeft = "150px"
                 playAgain.style.marginTop = "-400px"
                 document.getElementById("players-div").style.marginLeft = "-120px"
-                rulesBtn.style.marginTop = "16.5em"
             } else if(result==="LOSE"){
                 document.getElementById("com-div").style.marginRight = "-120px"
                 playAgain.style.marginTop = "-400px"
-                rulesBtn.style.marginTop = "16.5em"
             }else{
                 playAgain.style.marginTop = "-300px"
-                rulesBtn.style.marginTop = "16em"
             }
-            
+            rulesBtn.style.marginTop = "8.5em"
             displayContainer.style.gap = "352px"
             rulesBtn.style.marginRight = "2em"
             
@@ -387,10 +384,10 @@ function resetGame(){
             }
             if (screenSize.matches){
                 
-                rulesBtn.style.margin = "18em 2em 2em auto"
+                rulesBtn.style.margin = "30em 2em 2em auto"
             } else {
                 rulesBtn.style.marginTop = "150px"
-                displayContainer.style.marginTop = "72px"
+                
             }
 }
 
@@ -398,7 +395,6 @@ playAgainBtn.addEventListener("click", function(){
     resetGame()
                
 })
-
 
     </script>
    </body>
