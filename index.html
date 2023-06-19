@@ -214,7 +214,9 @@ if (screenSize.matches) { // If media query matches
             document.getElementById("text-one").style.marginBottom = "-50px" 
             document.getElementById("text-two").style.paddingBottom = "50px" 
             document.getElementById("com-div").style.marginTop = "-134px"
-            displayContainer.marginLeft = "-50px"          
+            displayContainer.marginLeft = "-50px"  
+            rulesBtn.style.marginTop = "8.5em"
+
         } else if(result==="LOSE"){
             document.getElementById(`${playerChoice}`).style.marginTop = "-8px"
             document.getElementById("space").style.display = "none"
@@ -232,7 +234,7 @@ if (screenSize.matches) { // If media query matches
             document.getElementById("text-one").style.paddingBottom = "50px" 
             document.getElementById("players-div").style.marginTop = "-134px"
             displayContainer.marginRight= "-50px" 
-            
+            rulesBtn.style.marginTop = "8.5em"
         }else{
             document.getElementById("space").style.display = "none"
             displayContainer.innerHTML += `
