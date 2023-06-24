@@ -1,4 +1,3 @@
-
 const rulesBtn = document.getElementById("rules-btn")
 const htmlBody = document.getElementById("body");
 const mainEl = document.getElementById("main")
@@ -6,7 +5,6 @@ const html = document.getElementById("html");
 const rulesDisplay = document.getElementById('rules-display')
 const initialBackground = html.style.background;
 const screenSize = window.matchMedia("(min-width: 1024px)")
-
 
 
 // to get rules buttton to display rules for screen sizes
@@ -31,10 +29,6 @@ const screenSize = window.matchMedia("(min-width: 1024px)")
 
 })
 
-
-
-
-
 const choicesArr = ["rock", "paper", "scissors", "spock", "lizard"]
 let choicesContainer = document.getElementById("choices-container")
 let playerScore = document.getElementById("player-score")
@@ -54,7 +48,6 @@ playerScore.textContent =  fromLocalStorage
 
 const playAgainBtn = document.getElementById("play-again-btn")
 const playAgain = document.getElementById("play-again")
-
 
 
 function updateScoreBoard(){
@@ -77,11 +70,7 @@ function updateScoreBoard(){
            document.getElementById("win-or-lose").textContent = "TIE"
            } 
     playAgainBtn.style.display = "block"
-    rulesBtn.style.marginTop = "56px"
     localStorage.setItem("Score", JSON.stringify(playerScorePoint))
-    
-    
-
 }
 
 
@@ -115,225 +104,135 @@ function determineWinnner(playerChoice, computerChoice){
 // updating score
 
 
-
+const myDiv = document.getElementById("my-div")
+const comDiv = document.getElementById("com-div")
+const playerText =  document.getElementById("player-text")
+const comText = document.getElementById("com-text")
+const computersCompleteDiv = document.getElementById("computers-complete-div")
+const playersCompleteDiv = document.getElementById("players-complete-div")
+const comsBtn = document.getElementById("coms-btn")
+const playersBtn = document.getElementById("players-btn")
     // To show the results when player selects a button
 const displayContainer = document.getElementById("display-container")
-
-if (screenSize.matches) { // If media query matches
     function display(){
-    determineWinnner(playerChoice, computerChoice)
-    choicesContainer.style.display = "none"
-    
-    displayContainer.innerHTML = `
-        <div id="players-div"> 
-          <p class="text" id="text-one">YOU PICKED</p>
-          <div id="my-div"> 
-             <button id="${playerChoice}"></button>
-          </div>
-        </div>
-        <div id="space">
-            <p class="text">THE HOUSE PICKED</p>
-            <button></button>
-        </div>
-    `
-    const myDiv = document.getElementById("my-div")
-    const one = document.getElementById("text-one")
-    setTimeout(function(){
-        determineWinnner(playerChoice, computerChoice)
-        if(result==="WIN"){
-            myDiv.classList.add("shadow")
-            document.getElementById(`${playerChoice}`).style.marginTop = "-8px"
-            document.getElementById("space").style.display = "none"
-            displayContainer.innerHTML += `
-            <div id="com-div">
-                <p class="text" id="text-two">THE HOUSE PICKED</p>
-                <div id="your-div">
-                    <button id="${computerChoice}"></button>
-                </div>
-            </div>
-            `
-            document.getElementById(`${computerChoice}`).style.marginTop = "-8px"
-            document.getElementById("text-one").style.marginBottom = "-50px" 
-            document.getElementById("text-two").style.paddingBottom = "50px" 
-            document.getElementById("com-div").style.marginTop = "-134px"
-            displayContainer.marginLeft = "-50px"   
-            rulesBtn.style.marginBottom = "-2em"       
-        } else if(result==="LOSE"){
-            document.getElementById(`${playerChoice}`).style.marginTop = "-8px"
-            document.getElementById("space").style.display = "none"
-            displayContainer.innerHTML += `
-            <div id="com-div">
-                <p class="text" id="text-three">THE HOUSE PICKED</p>
-                <div id="your-div">
-                    <button id="${computerChoice}"></button>
-                </div>
-            </div>
-            `
-            document.getElementById("your-div").classList.add("shadow")
-            document.getElementById(`${computerChoice}`).style.marginTop = "-8px"
-            document.getElementById("text-three").style.marginBottom = "-50px" 
-            document.getElementById("text-one").style.paddingBottom = "50px" 
-            document.getElementById("players-div").style.marginTop = "-134px"
-            displayContainer.marginRight= "-50px" 
-            rulesBtn.style.marginBottom = "-2em"
-        }else{
-            document.getElementById("space").style.display = "none"
-            displayContainer.innerHTML += `
-            <div id="com-div">
-                <p class="text">THE HOUSE PICKED</p>
-                <div id="your-div">
-                    <button id="${computerChoice}"></button>
-                </div>
-            </div>
-            `
-            rulesBtn.style.marginBottom = "-4em"
-        }
-        
-        
-        setTimeout(function(){
-            updateScoreBoard()
-             determineWinnner(playerChoice, computerChoice)
-            if (result==="WIN"){
-                // playAgain.style.marginLeft = "150px"
-                playAgain.style.marginTop = "-400px"
-                document.getElementById("players-div").style.marginLeft = "-120px"
-            } else if(result==="LOSE"){
-                document.getElementById("com-div").style.marginRight = "-120px"
-                playAgain.style.marginTop = "-400px"
-            }else{
-                playAgain.style.marginTop = "-300px"
-            }
-            rulesBtn.style.marginTop = "8.5em"
-            displayContainer.style.gap = "352px"
-            rulesBtn.style.marginRight = "2em"
-            
-        }, 2500)
-            
-
-    },3000)
-    }
-        } else{   //phone layout
-        function display(){
         determineWinnner(playerChoice, computerChoice)
         choicesContainer.style.display = "none"
-        displayContainer.innerHTML = `
-        <div id="players-div">
-            <div id= "my-div">
-                <button id="${playerChoice}"></button>
-            </div>
-            <p class="text" id="text-one">YOU PICKED</p>
-        </div> 
-
-        <div id="space">
-            <button></button>
-            <p class="text">THE HOUSE PICKED</p>
-        </div>
-      
-    `
-    const myDiv = document.getElementById("my-div")
-    const one = document.getElementById("text-one")
-        
-    setTimeout(function(){
-        determineWinnner(playerChoice, computerChoice)
-        if (result==="WIN"){
-         myDiv.classList.add("shadow")
-        one.style.marginTop = "-40px"
-        one.style.marginLeft = "-50px"
-        displayContainer.style.gap = "0"
-        displayContainer.style.paddingTop = "40px"
-        myDiv.style.marginLeft = "-50px" 
-        
-        document.getElementById("space").style.display = "none"
-        displayContainer.innerHTML += `
-        <div id="com-div">
-            <div id="your-div">
-            <button id="${computerChoice}"></button>
-            </div>
-            <p class="text" id="three">THE HOUSE PICKED</p>
-        </div>
-        `
-        document.getElementById("com-div").style.marginTop ="60px"
-  
-        } else if(result==="LOSE"){
-        document.getElementById("space").style.display = "none"
-        displayContainer.innerHTML += `
-        <div id="com-div">
-            <div id="your-div">
-            <button id="${computerChoice}"></button>
-            </div>
-            <p class="text" id="three">THE HOUSE PICKED</p>
-        </div>
-        ` 
-        document.getElementById("your-div").classList.add("shadow")
-        document.getElementById("three").style.marginTop = "-40px"
-        document.getElementById("three").style.marginLeft = "50px"
-        displayContainer.style.gap = "0"
-        displayContainer.style.paddingTop = "40px"
-        document.getElementById("your-div").style.marginRight = "-50px"
-        document.getElementById("players-div").style.marginTop ="60px"
-        } else{
-            document.getElementById("space").style.display = "none"
-        displayContainer.innerHTML += `
-        <div id="com-div">
-            <div id="your-div">
-            <button id="${computerChoice}"></button>
-            </div>
-            <p class="text" id="three">THE HOUSE PICKED</p>
-        </div>
-        ` 
-        }
-        
-        // document.getElementById(`${playerChoice}`).style
-        
-        setTimeout(function(){
-            updateScoreBoard()
-            if(determineWinnner(playerChoice, computerChoice)&&result==="LOSE"){
+        displayContainer.style.display = "flex"
+        if(screenSize.matches){
+            rulesBtn.style.marginTop = "8.5em"
             }
-            
-        }, 2500)
-    },3000)
-    
-    
-        } 
-        
-    }
+        playersBtn.classList.add(`${playerChoice}`)
+        setTimeout(function(){
+            comsBtn.classList.remove("space")
+            comsBtn.classList.add(`${computerChoice}`)
+        }, 1500)
+            if (result === "WIN"){
+                setTimeout(function(){
+                    myDiv.classList.add("shadow")
+                    playerText.classList.add("player-text")
+                    comText.classList.add("margin")
+                    computersCompleteDiv.classList.add("margin-left")
+                    playersCompleteDiv.classList.add("shadow1")
+                    if (screenSize.matches){
+                        playersBtn.classList.add("margin-btn")
+                    }
+                    updateScoreBoard()
+                }, 2000)
+                    
+            } else if(result === "LOSE"){
+                setTimeout(function(){
+                    comDiv.classList.add("shadow")
+                    playerText.classList.add("margin")
+                    comText.classList.add("player-text")
+                    playersCompleteDiv.classList.add("margin-right")
+                    computersCompleteDiv.classList.add("shadow2")
+                    if (screenSize.matches){
+                        comsBtn.classList.add("margin-btn")
+                    }
+                    updateScoreBoard()
+                }, 2000)
 
+            } else if(result==="TIE"){
+                setTimeout(function(){
+                 updateScoreBoard()
+                 if(screenSize.matches){
+                    playersCompleteDiv.classList.add("margin-right"); 
+                    computersCompleteDiv.classList.add("margin-left")
+                     rulesBtn.classList.add("margin-top")
+                 }else{
+                     playersCompleteDiv.classList.add("margin-left"); 
+                     computersCompleteDiv.classList.add("margin-right")
+                 }
+                 
+            }, 2000)
+       
+    }
+}
 
 
 btns.forEach(btn => {
 
    btn.addEventListener('click', event => {
-    //    play()
        playerChoice = event.target.value 
        computerChoice = generateComputerChoice()
-       if (display() && reult === "WIN"){
-           document.getElementById(`${playerChoice}`).classList.add("shadow")
-       }
-        
+        display()
+       
        
    })
 
 })
 
 function resetGame(){
-           choicesContainer.style.display = "flex"
-            displayContainer.innerHTML = " "
+           displayContainer.style.display = "none"
+           choicesContainer.style.display = "flex"            
             document.getElementById("win-or-lose").innerHTML = " "
-            
             if (choicesContainer.style.display==="flex"){
                 playAgainBtn.style.display = "none"
-                displayContainer.style.gap = "71px"
             }
-            if (screenSize.matches){
-                
-                rulesBtn.style.margin = "30em 2em 2em auto"
-            } else {
-                rulesBtn.style.marginTop = "150px"
-                
+            
+            playersBtn.classList.remove(`${playerChoice}`)
+            comsBtn.classList.remove(`${computerChoice}`)
+            comsBtn.classList.add("space")
+            
+            if(screenSize.matches){
+                myDiv.classList.remove("shadow")
+                comDiv.classList.remove("shadow")
+                playerText.classList.remove("player-text")
+                playerText.classList.remove("margin")
+                comText.classList.remove("margin")  
+                comText.classList.remove("player-text")  
+                computersCompleteDiv.classList.remove("margin-left")
+                playersCompleteDiv.classList.remove("shadow1")
+                playersCompleteDiv.classList.remove("margin-right")
+                computersCompleteDiv.classList.remove("shadow2")
+                comsBtn.classList.remove("margin-btn")
+                playersBtn.classList.remove("margin-btn")
+                rulesBtn.style.marginTop = "-20em"
+         
+            } else if(!screenSize.matches){
+                myDiv.classList.remove("shadow")
+                playerText.classList.remove("player-text")
+                playerText.classList.remove("margin")
+                computersCompleteDiv.classList.remove("margin-left")
+                playersCompleteDiv.classList.remove("shadow1")
+                comDiv.classList.remove("shadow")
+                comText.classList.remove("margin")
+                comText.classList.remove("player-text")
+                playersCompleteDiv.classList.remove("margin-right"); 
+                computersCompleteDiv.classList.remove("shadow2")
+                playersCompleteDiv.classList.remove("margin-left"); 
+                computersCompleteDiv.classList.remove("margin-right")
             }
+            
 }
 
 playAgainBtn.addEventListener("click", function(){
     resetGame()
-               
+    
+              
 })
+
+
+
+
+

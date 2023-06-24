@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" id="html">
-  <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -19,7 +19,7 @@
   </head>
 
   <body id="body">
-    <main id="main">
+      <main id="main">
         <header class="container" id="header">
             <img class="logo" src="images/logo-bonus.svg" alt="Rock,Paper,Scissors,Lizard,Spock">
             <div class="score-display">
@@ -27,7 +27,7 @@
                 <h1 id="player-score">0</h1>
             </div>
         </header>
-        <div class="game choices-container" id="choices-container">
+        <div class="btns-display choices-container container" id="choices-container">
             <img src="images/bg-pentagon.svg" class="pentagon">
             <button class="scissors-btn background-img" id="scissors-btn" value="scissors"></button>
             <button class="spock-btn background-img" id="spock-btn" value="spock"></button>
@@ -35,7 +35,20 @@
             <button class="rock-btn background-img" id="rock-btn" value="rock"></button>
             <button class="lizard-btn background-img" id="lizard-btn" value="lizard"></button>
         </div>
-        <div id="display-container" ></div>
+        <div id="display-container" >
+            <div id="players-complete-div">
+                <div id="my-div">
+                    <button id="players-btn"></button>
+                </div>
+                <p class="text" id="player-text">YOU PICKED</p>
+            </div>
+            <div id="computers-complete-div">
+                <div id="com-div">
+                    <button class="space" id="coms-btn"></button>
+                </div>
+                <p class="text" id="com-text">THE HOUSE PICKED</p>
+            </div>
+        </div>
         <div id="play-again">
             <h2 id="win-or-lose"></h2>
             <button id="play-again-btn">Play Again</button>
@@ -55,7 +68,7 @@
             alt='close cross button'
             id='close-btn'>
       </div>
-      <script src="index.js"></script>
+      <script src="index.js" id="audio" ></script>
    </body>
    
 </html>
