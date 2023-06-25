@@ -10,7 +10,7 @@ html{
     background: radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%);
     font-family: 'Barlow Semi Condensed';
     user-select: none;
-    padding-bottom: 9em;
+    padding-bottom: 3.5em;
   }
   
   .container{
@@ -333,9 +333,7 @@ html{
         height: 108.08px;
     }
     
-    .choices-container{
-        margin-top: 6em;
-    }
+    
     
     header{
         width: 700px;
@@ -605,4 +603,17 @@ html{
     
  }
   
+}
+
+
+@media only screen and (min-height: 668px) and (max-height: 914px){
+
+    .choices-container{
+        margin-top: 8em;
+    
+    }
+
+    .rules-btn{
+        margin-top: 9em;
+    }
 }
