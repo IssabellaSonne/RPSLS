@@ -320,10 +320,25 @@ html{
 }
 
 
+.background{
+    background: none;
+}
 
-
+.display-none{
+    display: none;
+}
   
-
+.display-flex{
+    display: flex;
+}
+  
+.display-grid{
+    display: grid;
+}
+  
+.display-block{
+    display: block;
+}
   
   /* Desktop display */
 

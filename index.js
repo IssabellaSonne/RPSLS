@@ -10,21 +10,21 @@ const screenSize = window.matchMedia("(min-width: 1024px)")
 // to get rules buttton to display rules for screen sizes
     rulesBtn.addEventListener("click", function(){
         if (screenSize.matches) { // If media query matches
-            rulesDisplay.style.display = "grid"
+            rulesDisplay.classList.add("display-grid")
         } else{
-            htmlBody.style.background = "none";
-            mainEl.style.display = "none"
+            htmlBody.classList.add("background")
+            mainEl.classList.add("display-none")
             html.style.background = "none"
-            rulesDisplay.style.display = "flex"
-            rulesBtn.style.display = "none"
+            rulesDisplay.classList.add("display-flex")
+            rulesBtn.classList.add("display-none")
         } 
     
             const closeBtn = document.getElementById('close-btn');
             closeBtn.addEventListener("click", function(){
             html.style.background = initialBackground;
-            mainEl.style.display = "block"
-            rulesDisplay.style.display = "none"
-            rulesBtn.style.display = "block"
+            mainEl.classList.add("display-block")
+            rulesDisplay.classList.add("display-none")
+            rulesBtn.classList.add("display-block")
        
     })
 
