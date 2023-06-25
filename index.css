@@ -514,7 +514,7 @@ html{
   
 
   /* Tablet display */
-@media (min-width: 768px) { 
+  @media (min-width: 768px) and (max-width: 991px) {
     .logo{
         width: 75.84px;
         height: 75.08px;
@@ -604,4 +604,4 @@ html{
     
  }
   
-  
+}
