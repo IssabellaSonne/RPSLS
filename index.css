@@ -162,7 +162,7 @@ html{
   }
   
  #close-btn{
-     margin-bottom: -1.85em;
+     margin-bottom: 0;
  }
    
   
@@ -379,7 +379,7 @@ html{
     }
 
     body{
-        margin-bottom: 2em;
+        padding-bottom: 2em;
     }
     
     .spock-btn{
