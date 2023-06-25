@@ -16,6 +16,7 @@ const screenSize = window.matchMedia("(min-width: 1024px)")
             mainEl.style.display = "none"
             html.style.background = "none"
             rulesDisplay.style.display = "flex"
+            rulesBtn.style.display = "none"
         } 
     
             const closeBtn = document.getElementById('close-btn');
@@ -23,7 +24,7 @@ const screenSize = window.matchMedia("(min-width: 1024px)")
             html.style.background = initialBackground;
             mainEl.style.display = "block"
             rulesDisplay.style.display = "none"
-    
+            rulesBtn.style.display = "block"
        
     })
 

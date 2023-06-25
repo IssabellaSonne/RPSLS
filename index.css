@@ -9,7 +9,7 @@ html{
     background: radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%);
     font-family: 'Barlow Semi Condensed';
     user-select: none;
-    padding-bottom: 100px;
+    padding-bottom: 3.5em;
   }
   
   .container{
@@ -142,7 +142,7 @@ html{
       font-size: 1rem;
       font-weight: 600;
       display: block;
-      margin: 7.875em auto -3.5em auto;
+      margin: 7.875em auto 0 auto;
       font-family: inherit;
   }
   /* Phone styling for the rules page */
@@ -377,6 +377,10 @@ html{
         margin-left: -200px;
         cursor: pointer;
     }
+
+    body{
+        margin-bottom: 2em;
+    }
     
     .spock-btn{
         top: 50px;
@@ -397,7 +401,7 @@ html{
     }
     
     .rules-btn{
-        margin: -20em 2em -4.5em auto;
+        margin: -20em 2em 0 auto;
         cursor: pointer;
     }
     
