@@ -19,7 +19,7 @@ html{
 /* adding style to the header */
   header {
       padding: 0.75em;
-      display: flex;
+      display: flex;      
       justify-content: space-between;
       align-items: center;
       border: 2px solid hsl(217, 16%, 45%);
@@ -511,5 +511,96 @@ html{
 
   }
   
+
+  /* Tablet display */
+@media (min-width: 768px) and (max-width: 991px) { 
+    .logo{
+        width: 75.84px;
+        height: 75.08px;
+    }
+    
+    header{
+        width: 400px;
+        height: 80px;
+    }
+    
+    .score-display{
+        width: 100px;
+        height: 74px;
+        line-height: 1;
+    }
+    
+    .score-display h1{
+      font-size: 3rem;
+    }
+    
+    .score-display p{
+      font-size: 0.75rem;
+      
+    }
+    .choices-container{
+        margin-top: 7em;
+    }
+    
+    .pentagon{
+      width: 298.11px;
+      height: 282.06px;
+    }
+    
+    .btns-display button{
+      width: 115px;
+      height: 118px;
+      border-width: 12px;
+    }
+    
+    .rock-btn{
+        top: 220px;
+        margin-left: 200px;
+        cursor: pointer;
+    }
+    
+    .lizard-btn{
+        top: 220px;
+        margin-left: -200px;
+        cursor: pointer;
+    }
+
+    
+    
+    .spock-btn{
+        top: 50px;
+        margin-left: -300px;
+        cursor: pointer;
+    }
+    
+    .paper-btn{
+        top: 50px;
+        margin-left: 300px;
+        cursor: pointer;
+        
+    }
+    
+    .scissors-btn{
+        top: -40px;
+        cursor: pointer;
+    }
+    
+    
+    .rules-btn{
+        margin-top: 10em;
+    }
+    
+    #display-container button{
+        width: 152.61px;
+        height: 160px;
+        border-width: 18px;
+        /* margin-top: 63px   */
+    }
+    
+    .shadow{
+        width: 242.61px;
+        height: 240px;
+    
+ }
   
   
