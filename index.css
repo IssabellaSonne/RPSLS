@@ -343,7 +343,9 @@ html{
         width: 700px;
         height: 150px;
     }
-
+    .choices-container{
+        margin-top: 6em;
+    }
     .score-display{
         width: 150px;
         height: 114px;
