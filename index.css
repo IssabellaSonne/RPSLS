@@ -11,8 +11,7 @@ html{
     font-family: 'Barlow Semi Condensed';
     user-select: none;
     padding-bottom: 3.5em;
-    max-width: 350px;
-    max-height: 750px;
+    
   }
   
   .container{
