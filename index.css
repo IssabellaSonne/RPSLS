@@ -324,9 +324,10 @@ html{
   
 
   
-  @media (min-width: 1024px) {
-    /* Styles for desktop */
-    
+  /* Desktop display */
+
+@media (min-width: 1024px){
+
     .logo{
         width: 108.84px;
         height: 108.08px;
@@ -513,8 +514,8 @@ html{
   }
   
 
-  /* Tablet display */
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* CSS styles for tablets */ 
     .logo{
         width: 75.84px;
         height: 75.08px;
