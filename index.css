@@ -325,18 +325,16 @@ html{
   
 
   
-  /* Desktop display */
-
-@media (min-width: 1024px){
-
+@media (min-width: 1024px) {
+    /* Styles for desktop */
+    
     .logo{
         width: 108.84px;
         height: 108.08px;
     }
     
-    .body{
-        max-height: 768px;
-        max-width: 1366px;
+    .choices-container{
+        margin-top: 6em;
     }
     
     header{
@@ -358,6 +356,8 @@ html{
       font-size: 1rem;
       
     }
+    
+    
     
     .pentagon{
       width: 328.11px;
@@ -405,7 +405,7 @@ html{
     }
     
     .rules-btn{
-        margin: -20em 2em 0 auto;
+        margin: -22em 2em 0 auto;
         cursor: pointer;
     }
     
@@ -451,20 +451,20 @@ html{
     }
     
     .text{
-        margin-top: -400px
+        margin-top: -330px
     }
     
     .player-text{
-        margin-top: -537px;
+        margin-top: -480px;
     }
     .margin-btn{
-        margin-bottom: 65px;
+        margin-bottom: 70px;
     }
     
     #display-container button{
-        width: 292.61px;
-        height: 300px;
-        border-width: 36px;
+        width: 234.631px;
+        height: 234.631px;
+        border-width: 33.99px;
         margin-top: 63px  
     }
     
@@ -481,9 +481,9 @@ html{
     }
     
     .shadow{
-        width: 572.61px;
-        height: 570px;
-        box-shadow: inset 0 0 0 70px rgba(255, 255, 255, 0.05), 0 0 0 80px rgba(255, 255, 255, 0.01);
+        width: 520.631px;
+        height: 520.631px;
+        box-shadow: inset 0 0 0 70px rgba(255, 255, 255, 0.05), 0 0 0 70px rgba(255, 255, 255, 0.01);
         border: 70px solid rgba(255, 255, 255, 0.03);
         box-sizing: border-box;
         margin-top: -70px;
@@ -495,10 +495,10 @@ html{
     }
     
    .shadow1{
-      margin-left: -120px;
+      margin-left: -160px;
   }
   .shadow2{
-      margin-right: -120px;
+      margin-right: -160px;
   } 
 
   .margin-left{
@@ -507,14 +507,8 @@ html{
   .margin-right{
       margin-right: 200px;
   }
-   
-   .margin-top{
-       margin-top: 7.5em;
-   } 
-   
 
   }
-  
 
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
   /* CSS styles for tablets */ 
