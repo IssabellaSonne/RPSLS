@@ -120,7 +120,7 @@ const displayContainer = document.getElementById("display-container")
         choicesContainer.style.display = "none"
         displayContainer.style.display = "flex"
         if(screenSize.matches){
-            rulesBtn.style.marginTop = "4.5em"
+            rulesBtn.style.marginTop = "2em"
             }
         playersBtn.classList.add(`${playerChoice}`)
         setTimeout(function(){
