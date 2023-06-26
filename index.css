@@ -176,7 +176,7 @@ html{
       justify-content: center;
       align-items: center;
       gap: 50px;
-      margin-top: 6.6em;
+      margin-top: 5.6em;
       margin-bottom: 0;
   }
   /* display for the empty button before computer chooses */
@@ -261,6 +261,7 @@ html{
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      margin-top: 3.5em;
   }
   
   h2{
