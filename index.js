@@ -136,7 +136,7 @@ const displayContainer = document.getElementById("display-container")
                     playersCompleteDiv.classList.add("shadow1")
                     if (screenSize.matches){
                         playersBtn.classList.add("margin-btn")
-                        rulesBtn.style.marginTop = "-2em"
+                        rulesBtn.style.marginTop = "-4em"
                     }
                     updateScoreBoard()
                 }, 2000)
@@ -150,7 +150,7 @@ const displayContainer = document.getElementById("display-container")
                     computersCompleteDiv.classList.add("shadow2")
                     if (screenSize.matches){
                         comsBtn.classList.add("margin-btn")
-                        rulesBtn.style.marginTop = "-2em"
+                        rulesBtn.style.marginTop = "-4em"
                     }
                     updateScoreBoard()
                 }, 2000)
@@ -161,7 +161,7 @@ const displayContainer = document.getElementById("display-container")
                  if(screenSize.matches){
                     playersCompleteDiv.classList.add("margin-right"); 
                     computersCompleteDiv.classList.add("margin-left")
-                     rulesBtn.classList.add("margin-top")
+                    rulesBtn.style.marginTop = "-4em"
                  }else{
                      playersCompleteDiv.classList.add("margin-left"); 
                      computersCompleteDiv.classList.add("margin-right")
