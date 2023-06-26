@@ -515,7 +515,9 @@ html{
         height: 75.08px;
     }
 
-    
+    body{
+        margin-top: 2.5em;
+    }
     
     header{
         width: 400px;
