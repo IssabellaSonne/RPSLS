@@ -7,7 +7,7 @@ html{
 }
   
   body {
-    margin-top: 1.175em;
+    margin-top: 2em;
     background: radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%);
     font-family: 'Barlow Semi Condensed';
     user-select: none;
@@ -356,7 +356,9 @@ html{
       
     }
     
-    
+    body{
+        margin-top: 3em;
+    }
     
     .pentagon{
       width: 328.11px;
