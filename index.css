@@ -381,10 +381,6 @@ html{
         cursor: pointer;
     }
 
-    body{
-        padding-bottom: 2em;
-    }
-    
     .spock-btn{
         top: 50px;
         margin-left: -350px;
