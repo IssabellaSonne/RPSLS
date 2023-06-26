@@ -120,7 +120,7 @@ const displayContainer = document.getElementById("display-container")
         choicesContainer.style.display = "none"
         displayContainer.style.display = "flex"
         if(screenSize.matches){
-            rulesBtn.style.marginTop = "0"
+            rulesBtn.style.marginTop = "-1em"
             }
         playersBtn.classList.add(`${playerChoice}`)
         setTimeout(function(){
@@ -210,7 +210,7 @@ function resetGame(){
                 computersCompleteDiv.classList.remove("shadow2")
                 comsBtn.classList.remove("margin-btn")
                 playersBtn.classList.remove("margin-btn")
-                rulesBtn.style.marginTop = "-20em"
+                rulesBtn.style.marginTop = "-18em"
          
             } else if(!screenSize.matches){
                 myDiv.classList.remove("shadow")
