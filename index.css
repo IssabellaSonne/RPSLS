@@ -11,7 +11,7 @@ html{
     background: radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%);
     font-family: 'Barlow Semi Condensed';
     user-select: none;
-    padding-bottom: 3.5em;
+    padding-bottom: 5.5em;
   }
   
   .container{
@@ -160,7 +160,6 @@ html{
       font-family: inherit;
       font-size: 2rem;
       font-weight: 700;
-      margin-top: 2.97em;
       margin-bottom: -1.282em;
   }
   
@@ -177,7 +176,7 @@ html{
       justify-content: center;
       align-items: center;
       gap: 50px;
-      margin-top: 5.6em;
+      margin-top: 6.6em;
       margin-bottom: 0;
   }
   /* display for the empty button before computer chooses */
@@ -262,7 +261,6 @@ html{
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-top: 0;
   }
   
   h2{
