@@ -11,7 +11,6 @@ html{
     font-family: 'Barlow Semi Condensed';
     user-select: none;
     padding-bottom: 3.5em;
-    
   }
   
   .container{
@@ -325,16 +324,18 @@ html{
   
 
   
-@media (min-width: 1024px) {
-    /* Styles for desktop */
-    
+  /* Desktop display */
+
+@media (min-width: 1024px){
+
     .logo{
         width: 108.84px;
         height: 108.08px;
     }
     
-    .choices-container{
-        margin-top: 6em;
+    .body{
+        max-height: 768px;
+        max-width: 1366px;
     }
     
     header{
@@ -356,8 +357,6 @@ html{
       font-size: 1rem;
       
     }
-    
-    
     
     .pentagon{
       width: 328.11px;
@@ -405,7 +404,7 @@ html{
     }
     
     .rules-btn{
-        margin: -22em 2em 0 auto;
+        margin: -20em 2em 0 auto;
         cursor: pointer;
     }
     
@@ -451,20 +450,20 @@ html{
     }
     
     .text{
-        margin-top: -330px
+        margin-top: -400px
     }
     
     .player-text{
-        margin-top: -480px;
+        margin-top: -537px;
     }
     .margin-btn{
-        margin-bottom: 70px;
+        margin-bottom: 65px;
     }
     
     #display-container button{
-        width: 234.631px;
-        height: 234.631px;
-        border-width: 33.99px;
+        width: 292.61px;
+        height: 300px;
+        border-width: 36px;
         margin-top: 63px  
     }
     
@@ -481,9 +480,9 @@ html{
     }
     
     .shadow{
-        width: 520.631px;
-        height: 520.631px;
-        box-shadow: inset 0 0 0 70px rgba(255, 255, 255, 0.05), 0 0 0 70px rgba(255, 255, 255, 0.01);
+        width: 572.61px;
+        height: 570px;
+        box-shadow: inset 0 0 0 70px rgba(255, 255, 255, 0.05), 0 0 0 80px rgba(255, 255, 255, 0.01);
         border: 70px solid rgba(255, 255, 255, 0.03);
         box-sizing: border-box;
         margin-top: -70px;
@@ -495,10 +494,10 @@ html{
     }
     
    .shadow1{
-      margin-left: -160px;
+      margin-left: -120px;
   }
   .shadow2{
-      margin-right: -160px;
+      margin-right: -120px;
   } 
 
   .margin-left{
@@ -508,7 +507,108 @@ html{
       margin-right: 200px;
   }
    
-   
+   .margin-top{
+       margin-top: 7.5em;
+   } 
    
 
   }
+  
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* CSS styles for tablets */ 
+    .logo{
+        width: 75.84px;
+        height: 75.08px;
+    }
+
+    
+    
+    header{
+        width: 400px;
+        height: 80px;
+    }
+    
+    .score-display{
+        width: 100px;
+        height: 74px;
+        line-height: 1;
+    }
+    
+    .score-display h1{
+      font-size: 3rem;
+    }
+    
+    .score-display p{
+      font-size: 0.75rem;
+      
+    }
+    .choices-container{
+        margin-top: 7em;
+    }
+    
+    .pentagon{
+      width: 298.11px;
+      height: 282.06px;
+    }
+    
+    .btns-display button{
+      width: 115px;
+      height: 118px;
+      border-width: 12px;
+    }
+    
+    .rock-btn{
+        top: 220px;
+        margin-left: 200px;
+        cursor: pointer;
+    }
+    
+    .lizard-btn{
+        top: 220px;
+        margin-left: -200px;
+        cursor: pointer;
+    }
+
+    
+    
+    .spock-btn{
+        top: 50px;
+        margin-left: -300px;
+        cursor: pointer;
+    }
+    
+    .paper-btn{
+        top: 50px;
+        margin-left: 300px;
+        cursor: pointer;
+        
+    }
+    
+    .scissors-btn{
+        top: -40px;
+        cursor: pointer;
+    }
+    
+    
+    .rules-btn{
+        margin-top: 10em;
+    }
+    
+    #display-container button{
+        width: 152.61px;
+        height: 160px;
+        border-width: 18px;
+        /* margin-top: 63px   */
+    }
+    
+    .shadow{
+        width: 242.61px;
+        height: 240px;
+    
+ }
+  
+}
+
+
+
