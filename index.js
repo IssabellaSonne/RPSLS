@@ -136,6 +136,7 @@ const displayContainer = document.getElementById("display-container")
                     playersCompleteDiv.classList.add("shadow1")
                     if (screenSize.matches){
                         playersBtn.classList.add("margin-btn")
+                        rulesBtn.style.marginTop = "-2em"
                     }
                     updateScoreBoard()
                 }, 2000)
@@ -149,6 +150,7 @@ const displayContainer = document.getElementById("display-container")
                     computersCompleteDiv.classList.add("shadow2")
                     if (screenSize.matches){
                         comsBtn.classList.add("margin-btn")
+                        rulesBtn.style.marginTop = "-2em"
                     }
                     updateScoreBoard()
                 }, 2000)
