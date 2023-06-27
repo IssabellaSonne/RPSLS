@@ -2,8 +2,7 @@
 /* setting up body and html background and font */
 html{
     background: radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%);
-    margin: 0;
-    padding: 0;
+    
 }
   
   body {
@@ -358,6 +357,7 @@ html{
     body{
         margin-top: 3em;
         height: 100vh;
+        padding-bottom: 2em;
     }
     
     .pentagon{
