@@ -136,7 +136,7 @@ html{
   
   /* setting up rules button styling */
   .rules-btn{
-     padding: 0.75em 2.875em;
+      padding: 0.625em 2.25em;
       border: 1px solid #FFFFFF;
       border-radius: 8px;
       background-image: radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%);;
@@ -160,19 +160,13 @@ html{
       font-family: inherit;
       font-size: 2rem;
       font-weight: 700;
-      margin-top: 2.98em;
-      margin-bottom: 0;
+      margin-bottom: -1.282em;
   }
   
  #close-btn{
-     margin-bottom: -3.5em;
+     margin-bottom: 0;
  }
    
- .rules-diagram{
-    width: 90%;
-    margin-top: 0;
-    margin-bottom: 0;
- } 
   
  
 /* styling the buttons computer and player choses */
@@ -337,7 +331,6 @@ html{
     .btns-display button{
         width: 66px;
         height: 67px;
-        border-width: 8px;
     }
     
     .rock-btn{
@@ -561,5 +554,187 @@ body{
 }  
 }
 
+@media (min-width: 1024px) {
+    /* Styles for desktop */
+    
+    .logo{
+        width: 108.84px;
+        height: 108.08px;
+    }
 
+    .choies-container{
+        margin-top: 6em;
+    }
+
+    header{
+        width: 70%;
+    }
+
+    .score-display{
+        width: 150px;
+        height: 114px;
+        line-height: 1;
+    }
+    
+    .score-display h1{
+      font-size: 64px;
+    }
+    
+    .score-display p{
+      font-size: 1rem;
+      
+    }
+    
+    body{
+        margin-top: 3em;
+        height: 100vh;
+        padding-bottom: 2em;
+    }
+    
+    .pentagon{
+      width: 328.11px;
+      height: 312.06px;
+    }
+    
+    .btns-display button{
+      width: 145px;
+      height: 148px;
+      border-width: 18px;
+    }
+    /* setting up the choices-container button resized positions */
+    .rock-btn{
+        top: 250px;
+        margin-left: 200px;
+        cursor: pointer;
+    }
+    
+    .lizard-btn{
+        top: 250px;
+        margin-left: -200px;
+        cursor: pointer;
+    }
+
+    .spock-btn{
+        top: 50px;
+        margin-left: -350px;
+        cursor: pointer;
+    }
+    
+    .paper-btn{
+        top: 50px;
+        margin-left: 350px;
+        cursor: pointer;
+        
+    }
+    
+    .scissors-btn{
+        top: -60px;
+        cursor: pointer;
+    }
+    
+    .rules-btn{
+        margin: -21em 2em 0 auto;
+        cursor: pointer;
+    }
+    
+    
+    .rules-display{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        gap: 0;
+        background: white;
+        width: 400px;
+        height: 461px;
+        display: none;
+        grid-template: 1fr 400px / 1fr 1fr 1fr;
+        border-radius: 8px;
+    }
+    
+    .rules-display h1{
+        align-self: flex-start;
+        grid-row: 1/2;
+        grid-column: 1/2;
+        margin: 32px 0 0 32px;
+    }
+    
+    #close-btn {
+        align-self: flex-start;
+        grid-row: 1/2;
+        grid-column: 3/4;
+        margin-top: 38px;
+        margin-left: -23px;
+    }
+    
+    .rules-diagram{
+        width: 336px;
+        height: 330px;
+        grid-row: 2/3;
+        grid-column: 2/3;
+        margin-left: -83px;
+        
+    }
+    
+    .text{
+        margin-top: -330px
+    }
+    
+    .player-text{
+        margin-top: -480px;
+    }
+    .margin-btn{
+        margin-bottom: 70px;
+    }
+    
+    #display-container button{
+        width: 234.631px;
+        height: 234.631px;
+        border-width: 33.99px;
+        margin-top: 63px  
+    }
+    
+    #display-container{
+        gap: 71px;
+        width: 100%;
+    }
+    
+
+    
+    #display-container p{
+        font-size: 24px;
+        
+    }
+    
+    .shadow{
+        width: 520.631px;
+        height: 520.631px;
+        box-shadow: inset 0 0 0 70px rgba(255, 255, 255, 0.05), 0 0 0 70px rgba(255, 255, 255, 0.01);
+        border: 70px solid rgba(255, 255, 255, 0.03);
+        box-sizing: border-box;
+        margin-top: -70px;
+    }
+    
+    #play-again{
+        margin-top: 80px;
+        margin-bottom: 320px;
+    }
+    
+   .shadow1{
+      margin-left: -160px;
+  }
+  .shadow2{
+      margin-right: -160px;
+  } 
+
+  .margin-left{
+     margin-left: 200px; 
+  }
+  .margin-right{
+      margin-right: 200px;
+  }
+
+  }
 
