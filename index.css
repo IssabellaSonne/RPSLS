@@ -326,15 +326,44 @@ html{
 @media only screen and (max-width: 280px){
     
     .pentagon{
-        width: 175.89px;
-        height: 185.32px;
+        width: 155.89px;
+        height: 165.32px;
     }
-    .btns-display{
-        width: 36px;
-        height: 37px;
+    .btns-display button{
+        width: 66px;
+        height: 67px;
+    }
+    
+    .rock-btn{
+        top: 120px;
+        margin-left: 100px;
+        cursor: pointer;
+    }
+    
+    .lizard-btn{
+        top: 120px;
+        margin-left: -100px;
+        cursor: pointer;
+    }
+
+    .spock-btn{
+        top: 30px;
+        margin-left: -150px;
+        cursor: pointer;
+    }
+    
+    .paper-btn{
+        top:    30px;
+        margin-left: 150px;
+        cursor: pointer;
+        
+    }
+    
+    .scissors-btn{
+        top: -20px;
+        cursor: pointer;
     }
 }
-  
 
   
 @media (min-width: 1024px) {
