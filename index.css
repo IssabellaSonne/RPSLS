@@ -136,7 +136,7 @@ html{
   
   /* setting up rules button styling */
   .rules-btn{
-      padding: 0.625em 2.25em;
+     padding: 0.75em 2.875em;
       border: 1px solid #FFFFFF;
       border-radius: 8px;
       background-image: radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%);;
