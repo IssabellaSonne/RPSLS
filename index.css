@@ -414,7 +414,7 @@ html{
 }
 
 
-@media only screen and (min-width: 360px) and (max-width: 414px){
+@media only screen and (min-width: 376px) and (max-width: 414px){
     .choices-container{
         margin: 8em auto 0 auto;
     }
@@ -428,7 +428,7 @@ html{
     }
     
     .rules{
-        margin-bottom: -4.5em;
+        margin-top: 8.75em;
     }
 }
 
