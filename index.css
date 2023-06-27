@@ -12,6 +12,7 @@ html{
     user-select: none;
     padding-bottom: 3.5em;
     height: 100vh;
+    overflow-x: hidden !important;
   }
   
   .container{
@@ -337,7 +338,7 @@ html{
     .choies-container{
         margin-top: 6em;
     }
-    
+
     header{
         width: 70%;
     }
