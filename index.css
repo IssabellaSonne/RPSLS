@@ -360,6 +360,7 @@ html{
     
     body{
         margin-top: 3em;
+        height: 100vh;
     }
     
     .pentagon{
