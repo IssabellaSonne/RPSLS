@@ -413,6 +413,21 @@ html{
 
 }
 
+
+@media only screen and (min-width: 360px) and (max-width: 414px){
+    .choices-container{
+        margin: 8em auto;
+    }
+    
+    #display-container{
+        margin-top: 10em;
+    }
+    
+    #play-again{
+        margin: 3em auto;
+    }
+}
+
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
   /* CSS styles for tablets */ 
     .logo{
