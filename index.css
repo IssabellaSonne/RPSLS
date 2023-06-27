@@ -416,7 +416,7 @@ html{
 
 @media only screen and (min-width: 360px) and (max-width: 414px){
     .choices-container{
-        margin: 8em auto;
+        margin: 8em auto 0 auto;
     }
     
     #display-container{
@@ -425,6 +425,10 @@ html{
     
     #play-again{
         margin: 3em auto;
+    }
+    
+    .rules{
+        margin-bottom: -3.5em;
     }
 }
 
