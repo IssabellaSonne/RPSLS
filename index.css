@@ -167,6 +167,11 @@ html{
      margin-bottom: 3.5em;
  }
    
+ .rules-diagram{
+    width: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
+ } 
   
  
 /* styling the buttons computer and player choses */
