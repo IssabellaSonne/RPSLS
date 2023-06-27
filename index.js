@@ -210,7 +210,7 @@ function resetGame(){
                 computersCompleteDiv.classList.remove("shadow2")
                 comsBtn.classList.remove("margin-btn")
                 playersBtn.classList.remove("margin-btn")
-                rulesBtn.style.marginTop = "-21em"
+                rulesBtn.style.marginTop = "-22em"
          
             } else if(!screenSize.matches){
                 myDiv.classList.remove("shadow")

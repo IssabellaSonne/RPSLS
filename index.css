@@ -12,6 +12,7 @@ html{
     font-family: 'Barlow Semi Condensed';
     user-select: none;
     padding-bottom: 3.5em;
+    height: 100vh;
   }
   
   .container{
