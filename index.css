@@ -323,7 +323,11 @@ html{
 
 
 
-
+@media only screen(ax-width: 280px){
+    .choices-container{
+        width: 40%;
+    }
+}
   
 
   
