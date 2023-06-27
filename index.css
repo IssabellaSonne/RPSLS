@@ -136,8 +136,7 @@ html{
   
   /* setting up rules button styling */
   .rules-btn{
-      width: 128px;
-      height: 40px;
+      padding: 0.625em 2.25em;
       border: 1px solid #FFFFFF;
       border-radius: 8px;
       background-image: radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%);;
@@ -332,6 +331,7 @@ html{
     .btns-display button{
         width: 66px;
         height: 67px;
+        border-width: 8px;
     }
     
     .rock-btn{
@@ -409,6 +409,11 @@ html{
 
 .text{
     font-size: 12px;
+}
+
+#rules-btn{
+    font-size: 0.625rem;
+    border-radius: 6px;
 }
 
 }
