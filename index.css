@@ -334,10 +334,7 @@ html{
         width: 108.84px;
         height: 108.08px;
     }
-    
-    .choices-container{
-        margin-top: 6em;
-    }
+
     
     header{
         width: 70%;
@@ -601,7 +598,11 @@ html{
         height: 240px;
     
  }
-  
+
+
+body{
+    height: 100vh;
+}  
 }
 
 
