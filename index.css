@@ -323,9 +323,15 @@ html{
 
 
 
-@media only screen(ax-width: 280px){
-    .choices-container{
-        width: 40%;
+@media only screen and (max-width: 280px){
+    
+    .pentagon{
+        width: 175.89px;
+        height: 185.32px;
+    }
+    .choices-container buttons{
+        width: 56px;
+        height: 57px;
     }
 }
   
