@@ -323,7 +323,7 @@ html{
     margin-right: -2.667em;
 }
 
-
+/* Setting up brakpoints for phone sizes */
 
 @media only screen and (max-width: 280px){
     
@@ -430,7 +430,27 @@ h2{
 
 }
 
-@media only screen and (max-width: 375px) and (min-width: 281px){
+@media only screen and (min-width: 281px) and (max-width: 360px){
+    .choices-container{
+        margin: 6.5em auto 0 auto;
+    }
+    #display-container{
+        margin-top: 7em;
+        margin-bottom: 0.5em;
+    }
+    
+    #play-again{
+        margin: -1em auto 1.75em 0;
+    }
+    
+    .rules{
+        margin-top: 7em;
+    }
+    
+}
+
+
+@media only screen and (max-width: 375px) and (min-width: 361px){
     .rules-diagram{
         width: 80%;
     }
@@ -458,24 +478,6 @@ h2{
     }
 }
 
-@media only screen and (min-width: 359px) and (max-width: 360px){
-    .choices-container{
-        margin: 6.5em auto 0 auto;
-    }
-    #display-container{
-        margin-top: 7em;
-        margin-bottom: 0.5em;
-    }
-    
-    #play-again{
-        margin: -1em auto 1.75em 0;
-    }
-    
-    .rules{
-        margin-top: 7em;
-    }
-    
-}
 
 
 
