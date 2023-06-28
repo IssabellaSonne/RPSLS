@@ -423,6 +423,11 @@ h2{
     font-size: 2em;
 }
 
+.rules-display h1{
+    font-size: 1.75em;
+    margin: 2.175em 0 -1.5em 0;
+}
+
 }
 
 @media only screen and (max-width: 375px) and (min-width: 281px){
@@ -458,11 +463,12 @@ h2{
         margin: 6.5em auto 0 auto;
     }
     #display-container{
-        margin-top: 7.5em;
+        margin-top: 7em;
+        margin-bottom: 0.5em;
     }
     
     #play-again{
-        margin: 1.5em auto;
+        margin: -1em auto 1.75em 0;
     }
     
     .rules{
@@ -473,102 +479,125 @@ h2{
 
 
 
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  @media only screen and (min-width: 768px) and (max-width: 819px) {
   /* CSS styles for tablets */ 
     .logo{
-        width: 75.84px;
-        height: 75.08px;
+        width: 105.84px;
+        height: 105.08px;
     }
-
     
     header{
         width: 400px;
-        height: 80px;
+        height: 100px;
     }
     
     .score-display{
-        width: 100px;
-        height: 74px;
+        width: 120px;
+        height: 104px;
         line-height: 1;
     }
     
     .score-display h1{
-      font-size: 3rem;
+      font-size: 4.175rem;
     }
     
     .score-display p{
-      font-size: 0.75rem;
+      font-size: 1rem;
       
     }
     .choices-container{
-        margin-top: 7em;
-    }
-    
-    .pentagon{
-      width: 298.11px;
-      height: 282.06px;
-    }
-    
-    .btns-display button{
-      width: 115px;
-      height: 118px;
-      border-width: 12px;
-    }
-    
-    .rock-btn{
-        top: 220px;
-        margin-left: 200px;
-        cursor: pointer;
-    }
-    
-    .lizard-btn{
-        top: 220px;
-        margin-left: -200px;
-        cursor: pointer;
+        margin-top: 10em;
     }
 
-    
-    
-    .spock-btn{
-        top: 50px;
-        margin-left: -300px;
-        cursor: pointer;
-    }
-    
-    .paper-btn{
-        top: 50px;
-        margin-left: 300px;
-        cursor: pointer;
-        
-    }
-    
-    .scissors-btn{
-        top: -40px;
-        cursor: pointer;
-    }
+
+    .pentagon{
+        width: 328.11px;
+        height: 312.06px;
+      }
+      
+      .btns-display button{
+        width: 145px;
+        height: 148px;
+        border-width: 18px;
+      }
+      /* setting up the choices-container button resized positions */
+      .rock-btn{
+          top: 250px;
+          margin-left: 200px;
+          cursor: pointer;
+      }
+      
+      .lizard-btn{
+          top: 250px;
+          margin-left: -200px;
+          cursor: pointer;
+      }
+  
+      .spock-btn{
+          top: 50px;
+          margin-left: -350px;
+          cursor: pointer;
+      }
+      
+      .paper-btn{
+          top: 50px;
+          margin-left: 350px;
+          cursor: pointer;
+          
+      }
+      
+      .scissors-btn{
+          top: -60px;
+          cursor: pointer;
+      }
+      
     
     
     .rules-btn{
-        margin-top: 10em;
+        margin-top: 6.5em;
+        font-size: 24px;
     }
     
     #display-container button{
-        width: 152.61px;
-        height: 160px;
-        border-width: 18px;
-        /* margin-top: 63px   */
+        width: 202.61px;
+        height: 210px;
+        border-width: 24px;
     }
     
     .shadow{
-        width: 242.61px;
-        height: 240px;
+        width: 302.61px;
+        height: 300px;
     
  }
 
+ #play-again{
+    margin: 2em 0;
+    
+ } 
 
-body{
-    height: 100vh;
-}  
+.rules-diagram{ 
+    width: 65%
+}
+
+.rules-display h1{
+    font-size: 3em;
+    margin-top: 2em;
+}
+
+}
+
+@media only screen and (min-width: 415px) and (max-width: 540px) {
+
+    .rules-diagram{
+        width: 60%;
+    }
+    .rules-display h1{
+        margin: 2em 0 -1.5em 0;
+    }
+
+    #close-btn{
+        margin-top: -0.5em;
+    }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
