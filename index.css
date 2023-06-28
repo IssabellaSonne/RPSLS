@@ -479,7 +479,7 @@ h2{
 
 
 
-  @media only screen and (min-width: 768px) and (max-width: 819px) {
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
   /* CSS styles for tablets */ 
     .logo{
         width: 105.84px;
