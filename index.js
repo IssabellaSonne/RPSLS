@@ -120,7 +120,7 @@ const displayContainer = document.getElementById("display-container")
         choicesContainer.style.display = "none"
         displayContainer.style.display = "flex"
         if(screenSize.matches){
-            rulesBtn.style.marginTop = "-2em"
+            rulesBtn.classList.add("rules-margin-top-before")
             }
         playersBtn.classList.add(`${playerChoice}`)
         setTimeout(function(){
@@ -136,7 +136,7 @@ const displayContainer = document.getElementById("display-container")
                     playersCompleteDiv.classList.add("shadow1")
                     if (screenSize.matches){
                         playersBtn.classList.add("margin-btn")
-                        rulesBtn.style.marginTop = "-4em"
+                        rulesBtn.classList.add("rules-margin-top-after")
                     }
                     updateScoreBoard()
                 }, 2000)
@@ -150,7 +150,7 @@ const displayContainer = document.getElementById("display-container")
                     computersCompleteDiv.classList.add("shadow2")
                     if (screenSize.matches){
                         comsBtn.classList.add("margin-btn")
-                        rulesBtn.style.marginTop = "-4em"
+                        rulesBtn.classList.add("rules-margin-top-after")
                     }
                     updateScoreBoard()
                 }, 2000)
@@ -161,7 +161,7 @@ const displayContainer = document.getElementById("display-container")
                  if(screenSize.matches){
                     playersCompleteDiv.classList.add("margin-right"); 
                     computersCompleteDiv.classList.add("margin-left")
-                    rulesBtn.style.marginTop = "-4em"
+                    rulesBtn.classList.add("rules-margin-top-after")
                  }else{
                      playersCompleteDiv.classList.add("margin-left"); 
                      computersCompleteDiv.classList.add("margin-right")
@@ -210,7 +210,8 @@ function resetGame(){
                 computersCompleteDiv.classList.remove("shadow2")
                 comsBtn.classList.remove("margin-btn")
                 playersBtn.classList.remove("margin-btn")
-                rulesBtn.style.marginTop = "-22em"
+                rulesBtn.classList.remove("rules-margin-top-after")
+                rulesBtn.classList.remove("rules-margin-top-before")
          
             } else if(!screenSize.matches){
                 myDiv.classList.remove("shadow")
