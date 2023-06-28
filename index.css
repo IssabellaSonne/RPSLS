@@ -478,11 +478,21 @@ h2{
     }
 }
 
+@media only screen and (min-width: 415px) and (max-width: 767px) {
 
+    .rules-diagram{
+        width: 60%;
+    }
+    .rules-display h1{
+        margin: 2em 0 -1.5em 0;
+    }
 
+    #close-btn{
+        margin-top: -0.5em;
+    }
+}
 
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  /* CSS styles for tablets */ 
+ /* CSS styles for tablets 
     .logo{
         width: 105.84px;
         height: 105.08px;
@@ -513,17 +523,17 @@ h2{
 
 
     .pentagon{
-        width: 328.11px;
-        height: 312.06px;
+        width: 278.11px;
+        height: 262.06px;
       }
       
       .btns-display button{
-        width: 145px;
-        height: 148px;
+        width: 135px;
+        height: 138px;
         border-width: 18px;
       }
       /* setting up the choices-container button resized positions */
-      .rock-btn{
+      /* .rock-btn{
           top: 250px;
           margin-left: 200px;
           cursor: pointer;
@@ -570,37 +580,28 @@ h2{
         width: 302.61px;
         height: 300px;
     
- }
+ } */
+  @media only screen and (min-width: 768px) and (max-width: 819px) {
+ 
 
  #play-again{
-    margin: 2em 0;
+    margin: 0.75em 0 2em 0;
     
  } 
 
 .rules-diagram{ 
-    width: 65%
+    width: 45%;
 }
 
 .rules-display h1{
     font-size: 3em;
     margin-top: 2em;
-}
+} 
 
 }
 
-@media only screen and (min-width: 415px) and (max-width: 540px) {
 
-    .rules-diagram{
-        width: 60%;
-    }
-    .rules-display h1{
-        margin: 2em 0 -1.5em 0;
-    }
 
-    #close-btn{
-        margin-top: -0.5em;
-    }
-}
 
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     .logo{
