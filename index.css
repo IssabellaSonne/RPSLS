@@ -427,6 +427,11 @@ h2{
     font-size: 12px;
 }
 
+#win-or-lose{
+    margin: 1.5em 0 0.175em 0;
+}
+
+
 .rules-display h1{
     font-size: 1.75em;
     margin: 2.175em 0 -1.5em 0;
@@ -450,6 +455,8 @@ h2{
     .rules{
         margin-top: 7em;
     }
+
+
     
 }
 
@@ -610,8 +617,8 @@ font-size: 1.175em;
 }
 
 .rules-display h1{
-font-size: 1.75em;
-margin: 2.175em 0 -1.5em 0;
+font-size: 2.75em;
+margin: 2.175em 0 -0.5em 0;
 }
 
 }
