@@ -744,7 +744,7 @@ font-size: 6em;
 
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1367px) {
     /* Styles for desktop */
     
     .logo{
@@ -938,7 +938,7 @@ font-size: 6em;
   }
 
 
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1366px) {
     .logo{
         width: 78.84px;
         height: 78.08px;
