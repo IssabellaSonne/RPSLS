@@ -744,10 +744,10 @@ font-size: 6em;
 
 }
 
-/* @media (min-width: 1280px) { */
+@media (min-width: 1280px) {
     /* Styles for desktop */
     
-    /* .logo{
+    .logo{
         width: 108.84px;
         height: 108.08px;
     }
@@ -935,10 +935,10 @@ font-size: 6em;
     margin-top: -3.75em;
   }
 
-  } */
+  }
 
 
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
     .logo{
         width: 78.84px;
         height: 78.08px;
