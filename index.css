@@ -1,4 +1,8 @@
 
+*, *::before, *::after {
+    box-sizing: border-box
+}
+
 /* setting up body and html background and font */
 html{
     background: radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%);
@@ -12,7 +16,7 @@ html{
     user-select: none;
     padding-bottom: 3.5em;
     min-height: 100vh;
-    overflow: hidden !important;
+    overflow: hidden ;
   }
   
   .container{
