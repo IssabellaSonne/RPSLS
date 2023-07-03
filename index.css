@@ -515,10 +515,7 @@ h2{
         height: 95.08px;
     }
     
-    header{
-        width: 420px;
-        height: 120px;
-    }
+    
     
     .score-display{
         width: 120px;
@@ -635,8 +632,7 @@ margin: 2.175em 0 -0.5em 0;
     }
     
     header{
-        width: 420px;
-        height: 120px;
+        height: 12vh;
     }
     
     .score-display{
