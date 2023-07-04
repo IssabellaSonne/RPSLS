@@ -940,8 +940,8 @@ font-size: 6em;
 
   @media only screen and (min-width: 1024px) and (max-width: 1439px) {
     .logo{
-        width: 78.84px;
-        height: 78.08px;
+        width: 68.84px;
+        height: 68.08px;
     }
 
     .choies-container{
@@ -974,48 +974,48 @@ font-size: 6em;
     }
     
     .pentagon{
-      width: 288.11px;
-      height: 272.06px;
+      width: 328.11px;
+      height: 312.06px;
     }
     
     .btns-display button{
-      width: 105px;
-      height: 108px;
-      border-width: 14px;
+      width: 135px;
+      height: 138px;
+      border-width: 16px;
     }
     /* setting up the choices-container button resized positions */
     .rock-btn{
-        top: 200px;
-        margin-left: 150px;
+        top: 230px;
+        margin-left: 180px;
         cursor: pointer;
     }
     
     .lizard-btn{
-        top: 200px;
-        margin-left: -150px;
+        top: 230px;
+        margin-left: -180px;
         cursor: pointer;
     }
 
     .spock-btn{
-        top: 50px;
-        margin-left: -250px;
+        top: 60px;
+        margin-left: -280px;
         cursor: pointer;
     }
     
     .paper-btn{
-        top: 50px;
-        margin-left: 250px;
+        top: 60px;
+        margin-left: 280px;
         cursor: pointer;
         
     }
     
     .scissors-btn{
-        top: -30px;
+        top: -50px;
         cursor: pointer;
     }
     
     .rules-btn{
-        margin: -24em 2em 0 auto;
+        margin: -23em 2em 0 auto;
         cursor: pointer;
     }
     
@@ -1119,10 +1119,10 @@ font-size: 6em;
   }   
 
   .rules-margin-top-before{
-    margin-top: -8.5em;
+    margin-top: -5em;
   }
 
   .rules-margin-top-after{
-    margin-top: -10.25em;
+    margin-top: -6.5em;
   }
   }
